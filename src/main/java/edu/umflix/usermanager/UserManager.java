@@ -2,6 +2,7 @@ package edu.umflix.usermanager;
 
 
 import edu.umflix.authenticationhandler.exceptions.InvalidTokenException;
+import edu.umflix.authenticationhandler.exceptions.InvalidUserException;
 import edu.umflix.model.User;
 import edu.umflix.usermanager.exceptions.*;
 
@@ -14,8 +15,9 @@ public interface UserManager {
      * @throws InvalidEmailException thrown if the email is not valid
      * @throws InvalidPasswordException thrown if the password is not valid
      * @throws InvalidRoleException thrown if the role is not valid
+     * @throws EmailAlreadyTakenException thrown if the email is already taken
      */
-    public void register(User user) throws InvalidEmailException, InvalidPasswordException, InvalidRoleException;
+    public void register(User user) throws InvalidEmailException, InvalidPasswordException, InvalidRoleException, EmailAlreadyTakenException;
 
     /**
      * Logs a user into the system
