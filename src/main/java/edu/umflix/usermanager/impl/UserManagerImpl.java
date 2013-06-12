@@ -15,8 +15,12 @@ import org.apache.log4j.Logger;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 @Stateless(name = "UserManager")
+@WebService(portName = "UserManagerPort",
+        serviceName = "UserManagerWebService",
+        targetNamespace = "http://um.org/wsdl")
 public class UserManagerImpl implements UserManager{
 
     private static Logger logger = Logger.getLogger(UserManagerImpl.class);
