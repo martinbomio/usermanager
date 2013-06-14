@@ -6,7 +6,9 @@ import edu.umflix.authenticationhandler.exceptions.InvalidUserException;
 import edu.umflix.model.User;
 import edu.umflix.usermanager.exceptions.*;
 
+import javax.ejb.Local;
 
+@Local
 public interface UserManager {
 
     /**
