@@ -13,27 +13,27 @@ git pull https://github.com/martinbomio/usermanager/
 	
 3) To add a dependency to UserManager on another project:
 
-	4.1) Run in command line, where the sources have been downloaded:
+	3.1) Run in command line, where the sources have been downloaded:
 			mvn clean install 
 
-	4.2) Add dependency to pom.xml, in dependencies copy: 
+	3.2) Add dependency to pom.xml, in dependencies copy: 
 		<dependency>
  			<groupId>usermanager</groupId>
    			<artifactId>usermanager</artifactId>
 			<version>1.0-SNAPSHOT</version>		
 		</dependency>
 	
-5) To use the jar in another context the correspondent file will be generated under ./target folder
+4) To use the jar in another context run "mvn clean install" the correspondent file will be generated under ./target folder
 	
 
-6) To use it as a webapp:
+5) To use it as a webapp:
 
-	6.1) Change the pom.xml: under the tag <version>1.0-SNAPSHOT</version> add:
+	5.1) Change the pom.xml: under the tag <version>1.0-SNAPSHOT</version> add:
 			<packaging>war</packaging>
 
-	6.2) Run command: mvn clean install
+	5.2) Run command: mvn clean install
 		
-	6.3) The correspondent war file will be generated under ./target folder
+	5.3) The correspondent war file will be generated under ./target folder
 
 	
 
